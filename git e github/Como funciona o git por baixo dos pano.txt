@@ -1,0 +1,7 @@
+### Como funciona o git?
+
+Podemos imaginar o git como um Google Drive, DropBox, OneDrive... Basicamente nós 'subimos' nossos códigos e depois podemos 'baixar' esses mesmos códigos.
+
+O git vai criando ids por debaixo dos panos para identificar cada arquivo e cada alteração que fizemos em cada arquvio. Ou seja, cada alteração que fazemos tem seu id, nos permitindo acessar qualquer alteração feita ao longo do tempo.
+
+para mais informação [site fonte]: ([git | Introdução ao git (thewebdev.com.br)](https://thewebdev.com.br/git-introducao.php#:~:text=O git vai criando ids por debaixo dos,longo do tempo. Quais as vantagens do git%3F))
