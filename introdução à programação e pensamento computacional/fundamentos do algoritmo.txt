@@ -1,0 +1,37 @@
+# FUNDAMENTOS DO ALGORITMO
+
+**O QUE É UM ALGORITMO?**
+
+Um algoritmo pode ser definido como uma sequência de instruções que representam um modelo de solução para um determinado tipo de problema. Ou como um conjunto de instruções que foram executadas a fim de levar à obtenção da solução de um problema. Portanto, podemos dizer que é um conjunto ordenado e finito de etapas que nos permite resolver um problema.
+
+**CARACTERÍSTICAS**!
+
+1. Deve ser preciso, pois cada um de seus passos deve indicar com precisão e inequivocamente o que deve ser feito.
+
+2. Deve ser finito, porque um algoritmo deve ter um número limitado de passos.
+
+3. Deve ser definido, pois deve produzir os mesmos resultados para as mesmas condições de entrada.
+
+4. Você pode ter zero ou mais elementos de entrada.
+
+5. Deve produzir um resultado. Os dados de saída serão os resultados da execução das instruções.
+
+   **PROJETANDO UM ALGORITMO**
+
+   A alternativa de solução selecionada deve ser representada por um algoritmo, que pode ser desenvolvido usando pseudocódigo ou fluxograma na preferência do programador; em seguida, é verificado se o algoritmo atende às características de um algoritmo. Esta verificação é conhecida como um teste de desktop.
+
+   Um algoritmo pode ser representado por meio de duas formas, através de Pseudocode ou Flowcharts. Para a apresentação dos algoritmos que até agora têm sido usados no texto foram representados através de pseudocódigos.
+
+***Pseudocódigo:**
+
+Significa escrever as instruções do algoritmo em linguagem natural, como o expressamos diariamente, este procedimento facilita sua escrita em linguagens de programação.
+
+***Fluxogramas:**
+
+São representações gráficas das etapas necessárias que levam à solução algorítmica de um problema. Para projetá-los, são utilizados certos símbolos ou figuras que representam uma ação dentro do procedimento. Esses símbolos foram normalizados ou padronizados para representar os passos do algoritmo. Cada passo é representado através do símbolo apropriado, que são unidos com setas, chamadas linhas de fluxo, que por sua vez indicam a ordem em que os passos devem ser executados.
+
+DIAGRAMA DE FLUXO DE DADOS (DFD)
+
+DFD é um software projetado para construir e analisar algoritmos. Você pode criar diagramas de fluxo de dados para a representação de algoritmos estruturados de programação a partir de ferramentas de edição que o programa fornece para este fim. Depois de inserção do algoritmo representado pelo diagrama, você poderá executá-lo, analisá-lo e depurá-lo em um ambiente interativo projetado para este fim, a interface gráfica DFD, facilita muito o trabalho com diagramas, uma vez que simula a representação padrão de fluxogramas em folhas de papel.
+
+para mais informação[site fonte]: ([FUNDAMENTOS DOS ALGORITMOS | fundamentos algoritmo (wordpress.com)](https://fundamentosdealgoritmos.wordpress.com/fundamentos-de-algoritmos/#:~:text=FUNDAMENTOS DE ALGORITMOS 1 Debe ser Preciso%2C porque,o más elementos de entrada. Mas cosas... ))

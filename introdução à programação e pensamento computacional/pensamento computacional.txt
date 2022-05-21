@@ -1,0 +1,66 @@
+## O que é o pensamento computacional?
+
+O pensamento computacional é o processo de entender aspectos da computação em nosso mundo e aplicar ferramentas e técnicas para facilitar sistemas e processos. Na escola, pode ser exemplificado quando alunos resolvem problemas, dividindo-os em parte e utilizando a lógica.
+
+Esse conceito compreende a habilidade crítica, estratégica e criativa, utilizando os fundamentos da área da computação em diferentes áreas da vida. Assim, seja individualmente, seja em grupo, o(a) aluno(a) consegue pensar racionalmente e resolver questões.
+
+A transformação digital é uma realidade e o campo educacional também precisa se adaptar. A [Base Nacional Comum Curricular](http://s3.amazonaws.com/porvir/wp-content/uploads/2018/02/28185037/info-competencias-gerais-bncc_fev2018-01.jpg) incluiu a cultura digital na lista de competências gerais, mostrando como é importante que a escola e os pais atentem a essa mudança.
+
+Diferentemente do que o nome sugere, o pensamento computacional não se relaciona apenas à tecnologia ou à [programação](http://eminent-indecisive-maiasaura.blogs.rockstage.io/programacao-para-criancas/), muito menos exige o uso de um computador. Essa competência propõe que os indivíduos sejam capazes de identificar problemas e encontrar soluções com criatividade e utilizando outros tipos de conhecimento.
+
+Veja a seguir os princípios fundamentais desse conceito.
+
+### Decomposição
+
+Essa habilidade refere-se à capacidade de dividir um problema maior em partes menores. Assim, ao trabalhar cada parte de uma vez, fica mais fácil de o(a) aluno(a) entender o problema e resolvê-lo. A vantagem é que diminui a ansiedade e o medo de enfrentar os desafios. No caso da elaboração de um grande projeto escolar, a decomposição é aplicada quando o(a) estudante se organiza e se propõe a fazer uma parte a cada semana.
+
+### Abstração
+
+A abstração propõe o foco nos processos importantes em vez de priorizar os detalhes. Dessa forma, a solução pode ser válida para vários problemas diferentes. Ao aplicá-la na área educacional, o(a) aluno(a) entende como realizar exercícios mais rapidamente e pode usar essas técnicas em matérias diferentes, por exemplo.
+
+### Reconhecimento de padrões
+
+O reconhecimento de padrões é outro princípio fundamental do pensamento computacional. Ao realizá-lo, a criança consegue identificar tendências de comportamento e similaridades. A partir disso, é possível pensar em novas soluções, utilizando inovação e criatividade.
+
+### Pensamento algorítmico
+
+A palavra algoritmo remete ao seu contexto computacional, mas ele também pode ser empregado para simbolizar a criação de passos e soluções até alcançar um objetivo. É a utilização da lógica e da racionalidade para a solução de problemas.
+
+## Quais são as vantagens do pensamento computacional?
+
+O pensamento computacional traz várias vantagens para as crianças e ajuda no desenvolvimento sociocognitivo do indivíduo. Esse conceito não apenas prepara os jovens para identificar informações, como também para produzir algo importante a partir desses conceitos e aplicá-los em seu cotidiano.
+
+Além disso, contribui para a adaptação das aulas a um contexto social, no qual os indivíduos serão preparados para desenvolverem habilidades diversas que serão importantes nas exigências do mercado de trabalho.
+
+### Contribui para a resolução de problemas
+
+O pensamento computacional estimula a construção do pensamento lógico. Por isso, desde a infância, a criança deve ter contato com atividades que estimulem a percepção de padrões e determinadas ações. Depois de um tempo, de maneira lógica, ela mesma conseguirá resolver sozinha os problemas por meio da racionalidade.
+
+### Estimula a criatividade e autonomia das crianças
+
+A abstração e o pensamento algorítmico influenciam diretamente a [criatividade e a autonomia da criança](http://eminent-indecisive-maiasaura.blogs.rockstage.io/movimento-maker/). Quando o(a) seu(sua) filho(a) tem contato com esses estímulos, ele(a) deixa de ser consumidor(a) de informações e passa a criar e produzir também. Esse é um processo importante, pois prepara o(a) jovem para o mundo e faz com que ele(a) se [destaque dos demais](http://eminent-indecisive-maiasaura.blogs.rockstage.io/crianca-independente/).
+
+### Fomenta o conhecimento interdisciplinar
+
+Como já dissemos, o pensamento computacional não está relacionado apenas à programação e [tecnologia](http://eminent-indecisive-maiasaura.blogs.rockstage.io/entenda-a-importancia-da-tecnologia-na-educacao-atual/) ou à área de exatas. Quando a criança constrói um pensamento lógico e utiliza as ferramentas certas para resolver problemas, ela consegue repetir o processo e aplicá-lo em qualquer disciplina.
+
+Por isso é importante que os professores de todas as disciplinas — Português, Ciências, História, Educação Física, Artes, entre outros — também estimulem esse tipo de pensamento e proponha atividades que coloque-o em prática.
+
+### Desenvolve a alfabetização digital
+
+O pensamento computacional também ajuda na alfabetização digital. Mesmo não se restringindo aos aspectos tecnológicos, o conceito tem muitas aplicações nesse âmbito. Assim, é possível que a criança tenha contato com jogos e atividades no ambiente virtual que ajudem na solução de problemas.
+
+### Constrói uma base sólida para desafios profissionais no futuro
+
+Atualmente, a exigência por profissionais completos é alta. Além de concluírem uma graduação, os jovens precisam saber [uma segunda língua](http://eminent-indecisive-maiasaura.blogs.rockstage.io/ingles-para-criancas/) e compreender teorias e ferramentas que excedem o escopo de suas profissões. Nesse cenário, ter um pensamento computacional e saber aplicar a teoria na prática será um grande diferencial no mercado de trabalho.
+
+## Como a escola pode colaborar com esse processo?
+
+A escola pode ajudar muito nesse processo, por isso é importante que os pais busquem por instituições que utilizem metodologias inovadoras e que proponham aulas capazes de estimular o pensamento computacional.
+
+O [Colégio Academia](http://eminent-indecisive-maiasaura.blogs.rockstage.io/colegio-academia/) oferece aulas extracurriculares de robótica, além de todas as atividades que são trabalhadas diariamente nas salas de aula. Nessa disciplina específica, os alunos podem ter contato com teorias de programação e robótica, ampliando seu conhecimento e desenvolvendo a educação digital.
+
+Podemos concluir que o pensamento computacional é algo novo no ambiente educacional, mas de extrema importância para a construção de um conhecimento mais alinhado às exigências sociais.
+
+para mais informação [site fonte]:  ([Pensamento computacional: o que é e qual a sua importância? (academia.com.br)](https://blog.academia.com.br/pensamento-computacional/))
+
