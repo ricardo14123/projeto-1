@@ -109,3 +109,7 @@ Por fim, no *body* ficarão as *tags* e informações que serão mostradas ao se
   </footer>
 </body>
 ```
+
+
+
+para mais informação [site fonte]:([Estrutura e Tags Básicas do HTML 5 (github.com)](https://gist.github.com/profburnes/9d4d0ae6926e3adb6be7a9f6d1194064#:~:text= Estruturas e Tags Básicas do HTML5 ,informações que serão mostradas ao seu... More ))
