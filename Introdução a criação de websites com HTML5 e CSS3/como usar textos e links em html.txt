@@ -1,0 +1,101 @@
+# como usar textos e links em html
+
+O atributo "href" nomeia a concção com outra página de web. Na verdade é o lugar para onde serão enviados os usuários que clicarem no link.
+
+Links podem ser:
+
+- Internos - para lugares específicos da página (ancoras)
+- Locais - para páginas do mesmo domínio
+- Globais - para outros domínios, fora do site
+
+```
+HTMLInterno - href="#anchorname"
+Local - href="../img/foto.jpg"
+Global - href="http://www.tutorialehtml.com/"
+```
+
+## HTML - Links de Texto
+
+Para marcar o início e do fim de uma âncora pode ser usado <a></a>. Escolha o tipo de atributo que você precisa e coloque dentro da tag.
+
+Exemplo:
+
+```
+HTML<a href="http://www.tutorialehtml.com" target="_blank" title="HTML Tutorials">HTML Tutorials</a>http://www.tutorialehtml.com/)
+```
+
+
+
+## HTML - Link Targets
+
+O atributo "target" diz ao navegador se ele precisa abrir outra página na mesma janela ou em outra.
+
+| target=" | _blank"                                                      | Abrir uma nova janela |
+| -------- | ------------------------------------------------------------ | --------------------- |
+| _self"   | Abrir a página na mesma janela                               |                       |
+| _parent" | Abrir nova página na mesma janela do link                    |                       |
+| _top"    | Abre a nova página no mesmo navegador cancelando todos os demais frames |                       |
+
+O exmplo mostra como uma página pode ser aberta em uma janela do navegador. Desta forma podemos permanecer na página do tutorial e abrir uma nova página de navegação.
+
+```
+HTML<a href="http://www.google.com/" target="_blank" >Google </a>http://www.google.com/)
+```
+
+## HTML - Âncora
+
+É usada para lincar duas seções da mesma página. Desta forma temos que nomear essas seções. Para isso é indicado dar uma olhadano próximo exemplo.
+
+```
+HTML<h1>HTML - Hipertexto de Referência / href<a name="top"></a></h1>
+<h2>HTML - Links de Texto<a name="text"></a></h2>
+<h2>HTML - Texto de E-mail<a name="email"></a> </h2>
+```
+
+Depois temos que fazer um código para o link, colocando primeiro o nome da âncora.
+
+```
+HTML<a href="#top">Ir para cima</a>
+<a href="#text">Aprender sobre links de texto</a>
+<a href="#email">Aprender sobre endereços de e-mail</a>https://tutorialehtml.com/pt/html-tutorial-texto-links/#email)
+```
+
+## HTML - Link de E-mail
+
+Fazer um link de e-mail é bem simples. Se você quer que alguem te escreva um e-mail, a melhor maneira seria colocar a disposição um link com o seu e-mail e pre-estabelecer os assuntos.
+
+```
+HTML<a href="mailto:someone@example.com?subject=Questions " >Perguntas aqui</a>mailto:someone@example.com?subject=Questions)
+```
+
+No caso de o assunto não ser suficiente e você quer adicionar algo ao conteúdo do e-mail, pode fazê-lo com a ajuda do próximo código:
+
+```
+HTML<a href="mailto:someone@example.com?subject=Questions&body=Write here if you have questions " >Perguntas aqui</a>mailto:someone@example.com?subject=Questions&body=Write here if you have questions)
+```
+
+## HTML - Links de Download
+
+Os links de download se parecem com um link normal de texto. O problema é quando você quer adicionar uma foto. A melhor solução é usar uma miniatura como link, mas falaremos mais disso na próxima lição.
+
+```
+HTML<a href="http://www.tutorialehtml.com/htmlT/text.zip">Documento de Texto</a>
+```
+
+### HTML - Link de inscrição do Youtube
+
+Quando vemos um vídeo em uma página do YouTube, geralmente temos o botão para se inscrever ao lado dele. Mas o que acontece quando o vídeo é inserido em nosso próprio site. Aqui está como podemos simular um link semelhante da mesma maneira. Sinta-se à vontade para clicar para ver como funciona.
+
+```
+HTML<a href="https://www.youtube.com/channel/UCpGSnR65YSFi9mdNPCQSJyA?sub_confirmation=0" target="_blank">Inscreva-se no canal</a>https://www.youtube.com/channel/UCpGSnR65YSFi9mdNPCQSJyA?sub_confirmation=0)
+```
+
+## HTML - Default link/Base link
+
+use a tag <base> no intererior do elemento <head> para colocar um link base. Isso é necessário caso você tenha em algum lugar um link que não funciona ou um caso de um destino que não mais existe. O link base envia o usuário a um endereço específico. Geralmente para a página inicial, mas pode ser para qualquer outra página, eventualmente uma feita com esse propósito.
+
+```
+HTML<head>
+	<base href="http://www.tutorialehtml.com/">
+</head>
+```

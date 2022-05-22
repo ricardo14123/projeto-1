@@ -23,4 +23,6 @@
 
 - o que e semantica
 
+- como usar textos e links em html
+
   
