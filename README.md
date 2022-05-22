@@ -21,4 +21,6 @@
 
 - Estruturas e Tags Básicas do HTML5
 
+- o que e semantica
+
   
