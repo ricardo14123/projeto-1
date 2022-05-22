@@ -99,3 +99,7 @@ HTML<head>
 	<base href="http://www.tutorialehtml.com/">
 </head>
 ```
+
+
+
+para mais informação [site fonte]:([HTML Tutorial - Links de Texto, cirando-os e usando-os (tutorialehtml.com)](https://tutorialehtml.com/pt/html-tutorial-texto-links/))
