@@ -1,0 +1,87 @@
+# COMO INSERIR IMAGEM USANDO HTML NO SEU SITE
+
+A incorporação de imagens não era possível no início da web. Entretanto, logo depois, tornou-se possível adicionar imagens. Existem outros tipos de mídia para se considerar, mas iremos comentar sobre o simples elemento <img>, usado para inserir imagem em uma página web. 
+
+Segue abaixo o passo a passo para inserir uma imagem em seu site usando HTML. 
+
+**1º Passo — Upload dos arquivos no servidor** 
+
+Você deve fazer o upload de todos os arquivos necessários. Tanto os arquivos HTML ou PHP, bem como as imagens que você está planejando utilizar. Você pode fazer o upload de tudo no mesmo espaço ou você pode mover todas as imagens para uma pasta que pode ser facilmente criada e nomeada como “imagens”.
+
+**2º Passo — Verificando nomes de arquivos de imagens** 
+
+Você deve saber o nome exato dos arquivos das imagens. Anote-as ou abra as imagens em uma nova aba. Além de ver o nome do arquivo, preste a atenção na extensão (geralmente vemos os formatos .**gif, .png e .jpg**). A extensão é tão importante quanto o nome porque a imagem não vai carregar se a extensão não tiver especificada corretamente. 
+
+**3º Passo — Editando o arquivo HTML** 
+
+Abra o arquivo do seu site e navegue até a linha do arquivo onde você quer inserir a imagem no HTML. Usaremos, como exemplo, a logo do site. Por padrão, ela costuma ser localizada no topo da página, então deve estar em uma das primeiras linhas do conteúdo do <body>. 
+
+Para inserir imagem no HTML utilize o código a seguir: 
+
+<img src=”logo.jpg” alt=”some text” width=60 height=40> 
+
+Veja a explicação para os parâmetros dos elementos da imagem: 
+
+- **IMG** significa “imagem”: está tag informa ao navegador onde a imagem deve ser localizada no seu site. 
+- **SRC** significa “source” (origem): Este comando é inserido no comando IMG. O comando Source informa ao navegador qual o caminho para a imagem. É recomendado armazenar as imagens em um diretório chamado “imagens” ou “img”, por exemplo. Isso facilita a definir o caminho até as imagens, exemplo: *imagens/nomedaimagem.jpg* or *img/nomedaimagem.jpg*. Também é possível inserir uma url no lugar do caminho para a imagem. Se você encontrar uma imagem na internet, que não exija direitos de uso, você pode usar o link da imagem e inserir na tag source. 
+- **logo.jpg** é o nome da imagem. Você deve criar o nome completo da imagem como explicado no 2º Passo. 
+- **ALT** significa “alternate text”. Este texto será exibido quando a imagem não carregar por outros motivos, como a conexão por exemplo. Também é importante quando se trata de SEO e pode ter grande impacto no ranqueamento do seu site nos mecanismos de busca. O alt tag explica do que se trata a imagem e também aparece quando o usuários passa o mouse em cima da imagem. 
+- **“some text”** aqui você insere o texto que descreve a sua imagem. 
+- **WIDTH** indica a largura da sua imagem em pixels e pode variar de 1 a qualquer outro número. Mas claro que não faz sentido configurar uma imagem com a largura superior à largura da tela do navegador. 
+- **HEIGHT** indica a altura das imagens em pixels. As regras seguem as mesmas da largura. A partir de 1 pixel e que seja proporcional ao tamanho da tela do navegador do seu usuário. 
+
+Portanto, ao inserir imagem no HTML do seu site, o código deverá ser conforme mostrado abaixo. Todas as tags utilizadas aqui são padrão e suficientes para exibir sua logo no seu site. 
+
+<!doctype html> 
+
+<html> 
+
+<body> 
+
+<img src=”images/logo.png” alt=”some text” width=300 height=200> 
+
+</body> 
+
+</html> A incorporação de imagens não era possível no início da web. Entretanto, logo depois, tornou-se possível adicionar imagens. Existem outros tipos de mídia para se considerar, mas iremos comentar sobre o simples elemento <img>, usado para inserir imagem em uma página web. 
+
+Segue abaixo o passo a passo para inserir uma imagem em seu site usando HTML. 
+
+**1º Passo — Upload dos arquivos no servidor** 
+
+Você deve fazer o upload de todos os arquivos necessários. Tanto os arquivos HTML ou PHP, bem como as imagens que você está planejando utilizar. Você pode fazer o upload de tudo no mesmo espaço ou você pode mover todas as imagens para uma pasta que pode ser facilmente criada e nomeada como “imagens”.
+
+**2º Passo — Verificando nomes de arquivos de imagens** 
+
+Você deve saber o nome exato dos arquivos das imagens. Anote-as ou abra as imagens em uma nova aba. Além de ver o nome do arquivo, preste a atenção na extensão (geralmente vemos os formatos .**gif, .png e .jpg**). A extensão é tão importante quanto o nome porque a imagem não vai carregar se a extensão não tiver especificada corretamente. 
+
+**3º Passo — Editando o arquivo HTML** 
+
+Abra o arquivo do seu site e navegue até a linha do arquivo onde você quer inserir a imagem no HTML. Usaremos, como exemplo, a logo do site. Por padrão, ela costuma ser localizada no topo da página, então deve estar em uma das primeiras linhas do conteúdo do <body>. 
+
+Para inserir imagem no HTML utilize o código a seguir: 
+
+<img src=”logo.jpg” alt=”some text” width=60 height=40> 
+
+Veja a explicação para os parâmetros dos elementos da imagem: 
+
+- **IMG** significa “imagem”: está tag informa ao navegador onde a imagem deve ser localizada no seu site. 
+- **SRC** significa “source” (origem): Este comando é inserido no comando IMG. O comando Source informa ao navegador qual o caminho para a imagem. É recomendado armazenar as imagens em um diretório chamado “imagens” ou “img”, por exemplo. Isso facilita a definir o caminho até as imagens, exemplo: *imagens/nomedaimagem.jpg* or *img/nomedaimagem.jpg*. Também é possível inserir uma url no lugar do caminho para a imagem. Se você encontrar uma imagem na internet, que não exija direitos de uso, você pode usar o link da imagem e inserir na tag source. 
+- **logo.jpg** é o nome da imagem. Você deve criar o nome completo da imagem como explicado no 2º Passo. 
+- **ALT** significa “alternate text”. Este texto será exibido quando a imagem não carregar por outros motivos, como a conexão por exemplo. Também é importante quando se trata de SEO e pode ter grande impacto no ranqueamento do seu site nos mecanismos de busca. O alt tag explica do que se trata a imagem e também aparece quando o usuários passa o mouse em cima da imagem. 
+- **“some text”** aqui você insere o texto que descreve a sua imagem. 
+- **WIDTH** indica a largura da sua imagem em pixels e pode variar de 1 a qualquer outro número. Mas claro que não faz sentido configurar uma imagem com a largura superior à largura da tela do navegador. 
+- **HEIGHT** indica a altura das imagens em pixels. As regras seguem as mesmas da largura. A partir de 1 pixel e que seja proporcional ao tamanho da tela do navegador do seu usuário. 
+
+Portanto, ao inserir imagem no HTML do seu site, o código deverá ser conforme mostrado abaixo. Todas as tags utilizadas aqui são padrão e suficientes para exibir sua logo no seu site. 
+
+<!doctype html> 
+
+<html> 
+
+<body> 
+
+<img src=”images/logo.png” alt=”some text” width=300 height=200> 
+
+</body> 
+
+</html> 
