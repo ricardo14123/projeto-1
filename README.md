@@ -29,6 +29,8 @@
 
 - Conceito de **CSS3**
 
+- estilizando elementos, textos e listas
+
   
 
   

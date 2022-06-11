@@ -1,0 +1,392 @@
+# Estilizando o Texto do Website
+
+vamos começar pelas propriedades mais básicas do texto: cor e fonte. Se você reparar bem, verá que o texto não está 100% preto, e sim um cinza bem escuro. Fiz isso para que fugisse do padrão mesmo e para que pudéssemos aplicar uma cor um pouco diferente à maioria do texto do website. A cor utilizada no layout para os textos é `rgb(51,51,51)` com quantidades iguais de vermelho, verde e azul; ou seja, um cinza.
+
+Em hexadecimal isso é traduzido para `#333333`. Como os números hexadecimais `33` para vermelho, `33` para verde e `33` para azul são compostos de números iguais, podemos abreviar isso como `#333`. Aplicando isso usando a propriedade `color` na tag `body`, temos esta cor para todos os elementos de texto do site:
+
+```css
+/*
+-- Tipografia e Cores
+*/
+
+body {
+    color: #333;
+}
+```
+
+Com isso temos o texto em cinza escuro para o site inteiro (com outras regras podemos sobrepor esta, como veremos depois).
+
+Agora iremos definir a fonte. É importante utilizarmos fontes comuns que estejam instaladas no computador do usuário; caso contrário, poderá haver alteração de layout devido à substituição de fonte (a não ser que seja utilizado o recurso `@font-face` da CSS3, veja nota lateral). Neste caso, iremos utilizar a propriedade `font-family`, também na tag `body`, para que possamos definir uma fonte padrão para todo o site.
+
+Conforme vimos nesta unidade, podemos especificar uma sequência de fontes em ordem de preferência, conhecidas como *font stacks* (ou "pilha" de fontes). Desenvolvedores por todo o mundo já elaboraram sequências de fontes otimizadas para diferentes situações e, para este site, escolhi uma do artigo [8 Definitive Font Stacks, do Sitepoint](http://www.sitepoint.com/eight-definitive-font-stacks/). A sequência no código abaixo prevê fontes instaladas no Windows, Mac OS e Linux, além da especificação genérica `sans-serif`, no caso improvável de nenhuma fonte da lista estar instalada no computador do usuário.
+
+Além da tag `body`, aplicamos a regra também para os elementos de formulário `input`, `select` e `textarea`. Dependendo do navegador, eles podem trazer fontes padrão que não seriam sobrescritas apenas pela regra na tag `body`. Por isso, a regra aplicada a várias tags abaixo:
+
+```css
+body, input, select, textarea {
+    /* fonte: http://www.sitepoint.com/eight-definitive-font-stacks-2/ */
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+```
+
+Em seguida, definimos os estilos de links: normais, visitados, com estado "hover" (quando o cursos do mouse está em cima), focados (através da tecla "Tab" do teclado) e ativos (com o clique ou a tecla "Enter"):
+
+```css
+a:link {
+    color: #0F599F;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 1px dotted #F00;
+}
+
+a:active {
+    color: #F00;
+}
+```
+
+Uma das tags mais utilizadas para texto é a `p`. Vamos definir estilos básicos como tamanho de fonte, margem posterior e entrelinhas para uma leitura mais confortável:
+
+```css
+p {
+    font-size: 16px;
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+}
+```
+
+Agora definimos estilos básicos para os títulos da div "conteudo-principal". Aproveito para fazer um "reset" de um estilo padrão dos navegadores: negrito para os títulos. Como geralmente os títulos já são utilizados em tamanho grande, geralmente deixá-los em negrito acaba tornando o visual muito pesado. Por isso, podemos colocar na seção "Padrões e Reset" do arquivo CSS esta regra, pois sobrepõe um estilo padrão dos navegadores.
+
+```css
+/*
+-- Padrões e Reset
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/*
+-- Tipografia e Cores
+*/
+
+[...]
+
+#conteudo-principal h1 {
+    font-size: 36px;
+    margin-bottom: 0.5em;
+}
+
+#conteudo-principal h2 {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+}
+```
+
+Como o título `h2` do conteúdo principal e o `h1` do conteúdo secundário usam as mesmas definições de tamanho de fonte e margem, podemos utilizar a mesma regra e usar dois seletores, apenas separando-os com uma vírgula. Já para os parágrafos do conteúdo secundário, reduzimos um pouco a fonte, conforme o layout. Propriedades como cor e margens serão herdadas das regras que já fizemos para as tags `body` e `p`, respectivamente:
+
+```css
+/* modificando a regra anterior */
+#conteudo-principal h2,
+#conteudo-secundario h1 {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+}
+
+#conteudo-secundario p {
+    font-size: 14px;
+}
+```
+
+Para finalizar os estilos gerais de texto, definimos algumas regras para listas ordenadas e não ordenadas dentro do conteúdo principal. A primeira regra define tamanho de fonte e margens (além da margem de baixo, margem também na esquerda para indentar a lista dentro do conteúdo). A segunda regra usa a propriedade `list-style-type` para deixar os itens de lista pontuados com um quadrado. Outros valores incluem, para `ul`, `circle` (círculo), `disc` (disco, valor padrão), entre outros; para `ol`, `decimal` (números, valor padrão), `lower-alpha` (a, b, c), entre outros.
+
+```css
+#conteudo-principal ul,
+#conteudo-principal ol {
+    font-size: 16px;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#conteudo-principal ul {
+    list-style-type: square;
+}
+
+#conteudo-principal li {
+    margin-bottom: 0.3em;
+}
+```
+
+Com isso, temos a base de CSS para todo o texto do site. O código completo das seções "Padrões e Reset" e "Tipografia e Cores" do arquivo "estilos.css" até agora está abaixo:
+
+```css
+/*
+-- Padrões e Reset
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/*
+-- Tipografia e Cores
+*/
+
+body {
+    color: #333;
+}
+
+body, input, select, textarea {
+    /* fonte: http://www.sitepoint.com/eight-definitive-font-stacks-2/ */
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+a:link {
+    color: #0F599F;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 1px dotted #F00;
+}
+
+a:active {
+    color: #F00;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+}
+
+#conteudo-principal h1 {
+    font-size: 36px;
+    margin-bottom: 0.5em;
+}
+
+#conteudo-principal h2,
+#conteudo-secundario h1 {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+}
+
+#conteudo-secundario p {
+    font-size: 14px;
+}
+
+#conteudo-principal ul,
+#conteudo-principal ol {
+    font-size: 16px;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#conteudo-principal ul {
+    list-style-type: square;
+}
+
+#conteudo-principal li {
+    margin-bottom: 0.3em;
+}
+```
+
+# CSS Border: estilizando com bordas seus elementos CSS
+
+No CSS, o espaço que um elemento ocupa é separado em `margin`, `padding` e `border`. Neste artigo, vamos aprender como podemos estilizar o seu `border`!
+
+Ao inserir um elemento em um documento HTML, há várias possibilidades de estilizar sua borda. Você pode utilizar estilos que a propriedade já possui, além de poder também alterar sua cor, espessura e até mesmo seu formato! Utilizando apenas o poder do CSS! E caso queira aplicar na borda de algum elemento uma imagem bem bonita que você encontrou no Google, também é possível!
+
+### Estilos de borda padrão da tag `border-style`
+
+![Imagem com uma lista de caixas retangulares organizadas na vertical, com estilos de bordas padrão da tag `border-style`. Todos os elementos possuem bordas com cor azul, fundo branco e fonte de cor preta. No primeiro elemento contém a frase “Sou um elemento com borda dotted”, este elemento possui uma borda do tipo dotted. O segundo elemento contém a frase “Sou um elemento com borda double”, este elemento possui borda double. O terceiro elemento possui a frase “Sou um elemento com borda groove”, este elemento possui borda groove. O quarto elemento possui a frase “Sou um elemento com borda ridge”, este elemento possui borda ridge. O quinto elemento possui a frase “Sou um elemento com borda inset”, este elemento possui borda inset. O sexto elemento possui a frase “Sou um elemento com borda outset.”, este elemento possui borda outset. O sétimo elemento possui a frase “Sou um elemento com borda dashed”, este elemento possui borda dashed. O oitavo elemento possui a frase “Sou um elemento com borda solid”, este elemento possui borda solid.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem1.png)
+
+### Escreva menos código
+
+Utilizando apenas a propriedade `border`, é possível aplicar três valores:
+
+```
+border: 30px solid blue;
+```
+
+O código acima é uma forma abreviada de escrever os mesmos valores abaixo:
+
+```
+border-width: 30px; // Estiliza a sua largura
+border-style: solid; // Estiliza seu estilo
+border-color:  blue; // Estiliza sua cor
+```
+
+### Personalizando bordas
+
+#### É possível que um elemento tenha borda em apenas um de seus lados
+
+![Caixa retangular com o fundo azul claro, e uma borda na parte superior com a cor azul. Dentro desta caixa contêm a frase “Sou um elemento com borda na parte superior", com cor preta.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem2.png)
+
+Para realizar isso, então, devemos utilizar apenas a propriedade `border-top`. Veja abaixo o HTML da borda da imagem acima.
+
+```
+border-top: 30px solid blue;
+background-color: rgb(150, 215, 255);
+```
+
+Para cada lado do elemento HTML, temos uma propriedade específica. Confira a seguir quais são:
+
+- `border-top`: Aplica borda na parte superior de um elemento.
+- `border-left`: Aplica borda no lado esquerdo de um elemento.
+- `border-right`: Aplica borda no lado direito de um elemento.
+- `border-bottom`: Aplica borda na parte inferior de um elemento.
+
+#### Aplique imagens em uma borda
+
+- ```
+  border-image
+  ```
+
+  :
+
+  - Esta propriedade permite aplicar imagens na borda de um elemento.
+
+![Caixa retangular com fundo azul claro, e uma borda de imagem com traços desalinhados na cor preta, dentro da caixa tem a frase “Sou um elemento com efeito border-image”.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem3.png)
+
+```
+border: 30px solid transparent;
+font-size: 40px;
+background-color: rgb(150, 215, 255);
+border-image: url("./132d0b11f96dcffaa700966900312a52.jpg") 150 round;
+```
+
+> Ao utilizar a propriedade `border-image`, é necessário aplicar também a propriedade `border` antes, junto dos três valores que a acompanham: `width`, `border-style` e `color`. Estas duas últimas propriedades (`border-style` e `color`) serão sobrepostas pela imagem, e apenas o `width` será aplicado.
+
+#### Podemos também utilizar propriedades e atributos adicionais para estilizar bordas
+
+- ```
+  border-radius
+  ```
+
+  :
+
+  - Esta propriedade permite arredondar as bordas de um elemento.
+
+![Uma caixa retangular com fundo azul claro, e uma borda azul levemente arredondada nas quatro extremidades. Dentro da caixa tem a frase “Sou um elemento com border-radius” em cor preta.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem4.png)
+
+```
+border: 30px solid blue;
+border-radius: 20px;
+```
+
+- ```
+  box-shadow
+  ```
+
+  :
+
+  - Esta propriedade permite aplicar efeito de sombra em um elemento.
+
+![Uma caixa retangular com fundo azul claro, e uma borda azul, contendo em seu lado direito e inferior uma sombra na cor cinza, e no interior da caixa tem a frase “Sou um elemento com efeito box shadow”.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem5.png)
+
+```
+box-shadow: 10px 20px grey;
+```
+
+Uma outra propriedade é a `hover`. Com ela, é possível alterar ou adicionar estilos em um elemento quando passar o cursor do mouse por cima dele. Veja o gif abaixo com uma demonstração.
+
+![Imagem animada no formato GIF, contendo uma caixa retangular, com fundo azul claro, borda azul, em seu interior tem a frase “Sou um elemento com efeito hover” com fonte na cor preta, ao lado direito da caixa há um cursor de mouse. O cursor do mouse é arrastado para o interior da caixa, e em seguida a cor da fonte é alterada para branco, a cor de fundo altera para azul, e a cor da borda altera para azul claro.](https://www.alura.com.br/artigos/assets/css-border-estilizando-bordas-elementos-css/imagem6.gif)
+
+Para utilizar o `hover`, você pode seguir o código abaixo. Perceba que utilizamos a propriedade `transition`. Ela serve para aplicar um tempo de transição na mudança de estilo.
+
+```
+elemento-referenciado {
+    border: 30px solid blue;
+    background-color: rgb(150, 215, 255);
+transition: 1s; //determina o tempo de transição para volta do estado normal font-size: 40px;
+    cursor: pointer;
+}
+
+elemento-referenciado:hover { //estilos que são adicionados ao passar o cursor no elemento
+border: 30px solid blue;
+background-color: rgb(150, 215, 255);
+transition: 1s;  //determina o tempo de transição para aplicação dos estilos
+}
+```
+
+# Como estilizar listas com CSS
+
+------
+
+
+
+ 
+
+Existem três propriedades diferentes para estilizar itens de lista: list-style-type , list-style-image , e list-style-position, que devem ser declarados nessa ordem. Os valores padrão são disco, externo e nenhum, respectivamente. Cada propriedade pode ser declarada separadamente ou usando a propriedade abreviada de list-style.
+
+## list-style-type 
+
+------
+
+Define a forma ou o tipo de marcador usado para cada item de lista.
+Alguns dos valores aceitáveis para o list-style-type:
+disc
+circle
+square
+decimal
+lower-roman
+upper-roman
+none
+Exemplo:
+Para usar marcadores quadrados para cada item da lista, por exemplo, você usaria o seguinte par de propriedade e valor:
+
+```css
+li {
+    list-style-type: square;
+}
+```
+
+##  list-style-image
+
+------
+
+A propriedade list-style-image determina se o ícone do item de lista está definido com uma imagem e aceita um valor nenhum ou um URL que aponte para uma imagem.
+
+```css
+li {
+    list-style-image: url(images/bullet.png);
+}
+```
+
+##  list-style-position
+
+------
+
+A propriedade list-style-position define onde posicionar o marcador de item da lista e aceita um dos dois valores: "inside" ou "outside".
+
+```css
+li {
+  list-style-position: inside;
+}
+```
+
+para mais informação sites fonte:
+
+[Estilizando o Texto do Website]([Estilizando o Texto do Website - HTML e CSS na Prática – Guilherme Müller - Web Developer (guilhermemuller.com.br)](https://guilhermemuller.com.br/ead/html-css-na-pratica/estilizando-texto-website))
+
+[CSS Border: estilizando com bordas seus elementos CSS]([CSS Border: estilizando com bordas seus elementos CSS | Alura](https://www.alura.com.br/artigos/css-border-estilizando-bordas-elementos-css))
+
+[Como estilizar listas com CSS]([Tutorial de CSS - Como estilizar listas com CSS (usandopy.com)](https://www.usandopy.com/tutorial/como-estilizar-listas-com-css/))
