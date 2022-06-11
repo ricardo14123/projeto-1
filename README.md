@@ -31,6 +31,8 @@
 
 - estilizando elementos, textos e listas
 
+- dimensão e alinhamento
+
   
 
   

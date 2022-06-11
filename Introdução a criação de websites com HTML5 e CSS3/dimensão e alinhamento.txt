@@ -1,0 +1,338 @@
+# CSS - Definindo o cálculo de dimensões com box-sizing
+
+Olá web developer! Ao estilizar elementos no CSS, muitas vezes precisamos definir dimensões. Porém, o modo como as dimensões dos elementos são calculadas podem causar alguns problemas.
+
+Onde quero chegar com isso? Bom, algumas pessoas desconhecem que temos duas maneiras de calcular o tamanho dos elementos. Você conhece?
+
+## Tamanho baseado no conteúdo
+
+Imagine uma `div` com um texto dentro. Vamos definir sua largura como `100px` e altura também sendo `100px`. Isso deveria resultar em um quadrado, já que largura e altura estão iguais, certo? Mas e se eu colocar uma margem interna (padding) de `50px` à esquerda? Qual será o tamanho?
+
+```css
+.box{
+	width: 100px;
+	height: 100px;
+	padding-left: 50px;
+}
+```
+
+
+
+Veja que o resultado foi um retângulo com uma largura de `150px`. A forma padrão de se calcular o tamanho de um elemento é a soma de sua largura ou altura (width ou height), margem interna (padding) e grossura da borda (border).
+
+Isso pode causar problemas em algumas ocasiões. Imagine que agora a gente queira criar um elemento que preencha 100% da largura de seu pai, mas que também tenha uma margem interna para que o texto não fique encostado em suas bordas. Para isso, vou criar um container para essa nossa caixa:
+
+```css
+.container{
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(0,0,0,0.5);
+}
+```
+
+E vou mudar a nossa caixa agora para que a largura seja `100%` ao invés de deixar `100px` fixos. Assim, nossa caixa poderá preencher dinamicamente dependendo do tamanho do elemento pai.
+
+```css
+.box{
+	width: 100%;
+	height: 100px;
+	padding-left: 50px;
+}
+```
+
+Teremos o seguinte resultado:
+
+Veja que a nossa caixa ultrapassou o tamanho do seu elemento pai, pois o `padding-left` de 50px foi somado à largura, resultado em uma largura total de 150px. Isso pode ser a causa de problemas quando vamos definir dimensões de um elemento dentro de outro e o layout acaba quebrando quando pensamos que deveria estar tudo certo.
+
+## Tamanho baseado nas bordas
+
+Para evitar o problema mostrado anteriormente, podemos usar a propriedade `box-sizing` para indicar como queremos que o navegador calcule as dimensões dos elementos. O valor padrão do `box-sizing` é `content-box`. Veja o que acontece quando alteramos para `border-box`:
+
+
+
+```css
+.box{
+	width: 100%;
+	height: 100px;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+```
+
+
+
+O `box-sizing` com o valor `border-box` faz com que o navegador não calcule a dimensão de um elemento somando bordas e margens com altura e largura.
+
+Com `content-box`, ao definir `width: 100px`, o interior (conteúdo) do elemento terá 100px, mas por termos `padding-left: 50px`, o tamanho total do elemento será 150px.
+
+Com `border-box`, se definirmos por exemplo, `width: 100px`, não importa se colocarmos `padding-left: 50px`, o tamanho final do elemento será os 100px que definimos em `width`. Mas como definimos 50px de `padding-left`, agora o interior do elemento terá apenas 50px de espaço para que o elemento possua 100px de largura no total.
+
+Para evitar problemas, muitas pessoas gostam de forçar o comportamento de todos os elementos e pseudo-elementos como `border-box` usando o seguinte código:
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+```
+
+Dependendo do que você está criando, se está trabalhando com texto, criando layouts, etc, cada comportamento pode ser o mais indicado.
+
+Centralizar as coisas é um dos aspectos mais difíceis do CSS.
+
+Os próprios métodos, geralmente, não são difíceis de entender. De fato, tem mais a ver com haver muitas formas diferentes de centralizar as coisas.
+
+O método que você usa pode variar dependendo do elemento HTML que você está tentando centralizar ou se você está tentando centralizar na horizontal ou na vertical.
+
+Neste tutorial, examinaremos como centralizar elementos diferentes na horizontal, na vertical, e tanto de uma forma como de outra.
+
+## Como centralizar na horizontal
+
+Centralizar elementos na horizontal, geralmente, é mais fácil do que na vertical. Aqui estão alguns elementos comuns que você pode querer centralizar na horizontal e modos diferentes de fazer isso.
+
+### **Como centralizar texto com a propriedade do CSS text-align center**
+
+Para centralizar texto ou links na horizontal, simplesmente use a propriedade `text-align` com o valor `center`:
+
+```html
+<div class="container">
+  <p>Hello, (centered) World!</p>
+</div>
+p {
+  text-align: center;
+}
+```
+
+![image-15](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/image-15.png)
+
+### **Como centralizar uma div com a propriedade do CSS margin auto**
+
+Use a versão reduzida da propriedade `margin` com o valor `0 auto` para centralizar elementos do tipo *block*, como uma `div`, na horizontal:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.child {
+  ...
+  margin: 0 auto;
+}
+```
+
+![box-centered-horizontally](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-horizontally.jpg)
+
+### **Como centralizar uma div na horizontal com o Flexbox**
+
+O Flexbox é a forma mais moderna de centralizar as coisas em uma página. Ele torna criar layouts responsivos muito mais fácil do que costumava ser. Porém, ele não é suportado em navegadores antigos, como o Internet Explorer.
+
+Para centralizar um elemento na horizontal com o Flexbox, simplesmente aplique `display: flex` e `justify-content: center` ao elemento pai:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  display: flex;
+  justify-content: center;
+}
+```
+
+![box-centered-horizontally-1](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-horizontally-1.jpg)
+
+## **Como centralizar na vertical**
+
+Centralizar elementos na vertical sem métodos modernos como o Flexbox pode ser uma tarefa de verdade. Aqui, vamos ver alguns dos métodos antigos de centralizar as coisas na vertical primeiramente. Depois, mostraremos como fazer isso com o Flexbox.
+
+### **Como centralizar uma div na vertical como o posicionamento absoluto do CSS e com margens negativas**
+
+Por muito tempo, essa foi a maneira que sempre se usava para centralizar as coisas na vertical. Para este método, você deve conhecer a altura do elemento que você quer centralizar.
+
+Primeiro, defina a propriedade `position` do elemento pai como `relative`.
+
+Depois, no elemento filho, defina as propriedades `position` como `absolute` e `top` como `50%`:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  position: relative;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* Centralizar na vertical */
+  position: absolute;
+  top: 50%;
+}
+```
+
+![box-centered-vertically-1](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-1.jpg)
+
+Isso, contudo, centralizou na vertical, de fato, apenas a extremidade superior do elemento filho.
+
+Para centralizar o elemento filho de verdade, defina a propriedade `margin-top` como `-(metade da altura do elemento filho)`:
+
+```css
+.container {
+  ...
+  position: relative;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* Centralizar na vertical */
+  position: absolute;
+  top: 50%;
+  margin-top: -25px; /* metade da altura desse elemento */
+}
+```
+
+![box-centered-vertically-final](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-final.jpg)
+
+### **Como centralizar uma div na vertical com transform e translate**
+
+Se você não sabe a altura de um elemento que você quer centralizar (ou mesmo se você souber), este método é um bom truque.
+
+Este método é muito semelhante ao das margens negativas acima. Defina a propriedade `position` do elemento pai como `relative`.
+
+Para o elemento filho, defina a propriedade `position` como `absolute` e defina `top` como `50%`. Agora, em vez de usar uma margem negativa para centralizar de verdade o elemento filho, simplesmente use `transform: translate(0, -50%)`:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  position: relative;
+}
+
+.child {
+  ... 
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+```
+
+![box-centered-vertically-final-1](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-final-1.jpg)
+
+Observe que `translate(0, -50%)` é a forma abreviada de `translateX(0)` e `translateY(-50%)`. Você também poderia escrever `transform: translateY(-50%)` para centralizar o elemento filho na vertical.
+
+### **Como centralizar uma div na vertical com Flexbox**
+
+Da mesma maneira que ele centraliza as coisas na horizontal, o Flexbox torna superfácil centralizar as coisas na vertical.
+
+Para centralizar um elemento na vertical, aplique `display: flex` e `align-items: center` ao elemento pai:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  display: flex;
+  align-items: center;
+}
+```
+
+![box-centered-vertically-final-2](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-final-2.jpg)
+
+## **Como centralizar na vertical e na horizontal**
+
+### **Como centralizar uma div na vertical e na horizontal com o posicionamento absoluto do CSS e as margens negativas**
+
+Isso é bem parecido com o método acima para centralizar um elemento na vertical. Como da última vez, você deve conhecer a largura e a altura do elemento que você quer centralizar.
+
+Defina a propriedade `position` do elemento pai como `relative`.
+
+Então, defina a propriedade `position` do filho como `absolute`, `top` como `50%` e `left` como `50%`. Isso simplesmente centraliza o canto superior esquerdo do elemento filho na vertical e na horizontal.
+
+Para centralizar de verdade o elemento filho, aplique uma margem superior negativa, definida como metade da altura do elemento filho, e uma margem esquerda negativa, definida como metade da largura do elemento filho:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  position: relative;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* Centralizar na vertical e na horizontal */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px; /* aplique margens superior e esquerda negativas para centralizar de verdade o elemento */
+}
+```
+
+![box-centered-vertically-and-horizontally](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-and-horizontally.jpg)
+
+### **Como centralizar uma div na vertical e na horizontal com transform e translate**
+
+Use este método para centralizar um elemento na vertical e na horizontal se não souber suas dimensões exatas e se não puder usar o Flexbox.
+
+Primeiro, defina a propriedade `position` do elemento pai como `relative`.
+
+Em seguida, defina a propriedade `position` do elemento filho como `absolute`, `top` como `50%` e `left` como `50%`.
+
+Por fim, use `transform: translate(-50%, -50%)` para centralizar de verdade o elemento filho:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  position: relative;
+}
+
+.child {
+  ... 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+
+![box-centered-vertically-and-horizontally-1](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-and-horizontally-1.jpg)
+
+### **Como centralizar uma div na vertical e na horizontal com Flexbox**
+
+O Flexbox é a maneira mais fácil de centralizar um elemento na vertical e na horizontal.
+
+Ele permite simplesmente uma combinação dos dois métodos de Flexbox anteriores. Em seguida, aplique `justify-content: center` e `align-items: center` para centralizar o(s) elemento(s) filho(s) na horizontal e na vertical:
+
+```html
+<div class="container">
+  <div class="child"></div>
+</div>
+.container {
+  ...
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+![box-centered-vertically-and-horizontally-2](https://www.freecodecamp.org/portuguese/news/content/images/2021/09/box-centered-vertically-and-horizontally-2.jpg)
+
+Isso é tudo o que você precisa saber para centralizar com as melhores alternativas. Agora, vá lá e centralize tudo o que quiser
+
+para mais informação sites fonte:
+
+[dimensão]([CSS - Definindo o cálculo de dimensões com box-sizing | Blog TreinaWeb](https://www.treinaweb.com.br/blog/css-definindo-o-calculo-de-dimensoes-com-box-sizing/))
+
+[alinhamento]([Como centralizar tudo com CSS - alinhar uma div, texto e mais (freecodecamp.org)](https://www.freecodecamp.org/portuguese/news/como-centralizar-tudo-com-css/))
+
