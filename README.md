@@ -30,6 +30,7 @@
 ### primeiros passos para desenvolvimento web
 
 - o que é internet
+- como funciona a internet
 
 
 
